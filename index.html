@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Translator</title>
+  </head>
+  <body>
+    <div
+      class="min-h-screen w-full bg-[#E8F1FB] flex flex-col justify-center items-center space-y-8 "
+    >
+      <div
+        class="mx-auto flex flex-col justify-center items-center space-y-5 md:space-y-0 md:flex-row md:space-x-10"
+      >
+        <div
+          class="mx-auto flex flex-col space-y-5 items-center justify-center"
+        >
+          <textarea
+            name="inputText"
+            id="inputText"
+            cols="30"
+            rows="5"
+            class="py-3 px-4 text-xl rounded-lg pt-4 resize-none"
+            placeholder="Enter Text"
+          ></textarea>
+
+          <div class="bg-white w-full text-center font-semibold p-2 rounded-lg">
+            <select
+              name="inputLang"
+              id="inputLang"
+              class="outline-none p-2 md:px-10 cursor-pointer"
+            ></select>
+          </div>
+        </div>
+
+        <div class="w-full flex justify-evenly items-center md:hidden">
+          <button class="bg-sky-400 px-4 py-2 rounded-lg" id="exchange">
+            <img src="./img/exch.png" alt="" />
+          </button>
+
+          <button class="bg-sky-400 px-4 py-2 rounded-lg" id="resetInput">
+            <img src="./img/refresh.png" alt="" />
+          </button>
+
+          <button class="bg-sky-400 px-4 py-2 rounded-lg" id="copyTo">
+            <img src="./img/paste.png" alt="" />
+          </button>
+        </div>
+
+        <div
+          class="mx-auto flex flex-col space-y-5 items-center justify-center"
+        >
+          <textarea
+            name="outputText"
+            id="outputText"
+            cols="30"
+            rows="5"
+            class="py-3 px-4 text-xl rounded-lg pt-4 resize-none"
+            placeholder="Translated Text"
+            readonly
+          ></textarea>
+
+          <div class="bg-white w-full text-center font-semibold p-2 rounded-lg">
+            <select
+              name="outputLang"
+              id="outputLang"
+              class="outline-none p-2 md:px-10 cursor-pointer"
+            ></select>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="bg-sky-400 rounded-lg text-white px-10 py-3 text-xl font-medium"
+          id="translateBtn"
+        >
+          Translate Text
+        </button>
+      </div>
+
+      <div class="hidden w-full md:flex justify-center items-center space-x-10">
+        <button class="bg-sky-400 px-4 py-2 rounded-lg" id="exchange">
+          <img src="./img/exch.png" alt="" />
+        </button>
+
+        <button class="bg-sky-400 px-4 py-2 rounded-lg" id="resetInput">
+          <img src="./img/refresh.png" alt="" />
+        </button>
+
+        <button class="bg-sky-400 px-4 py-2 rounded-lg" id="copyTo">
+          <img src="./img/paste.png" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/countries.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
