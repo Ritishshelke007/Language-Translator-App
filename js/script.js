@@ -32,7 +32,7 @@ translateBtn.addEventListener("click", (e) => {
     const fromLang = select[0].value;
     const toLang = select[1].value;
 
-    const url = `https://api.mymemory.translated.net/get?q=${input}&langpair=${fromLang}|${toLang}&de=eevil1202@gmail.com`;
+    const url = `[add your own url with api key]`;
 
     fetch(url)
       .then((res) => res.json())
